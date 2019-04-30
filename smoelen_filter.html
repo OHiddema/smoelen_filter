@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    #namelist p {
+      display: none;
+    }
+    #cbA:checked~* .A {
+      display: block;
+    }
+
+    #cbB:checked~* .B {
+      display: block;
+    }
+
+    #cbC:checked~* .C {
+      display: block;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <input type="checkbox" id='cbA' /> A
+  <input type="checkbox" id='cbB' /> B
+  <input type="checkbox" id='cbC' /> C
+
+  <div id='namelist'>
+    <p class='A'>Anton</p>
+    <p class='A'>Abe</p>
+    <p class='B'>Beatrix</p>
+    <p class='B'>Bob</p>
+    <p class='C'>Charlotte</p>
+    <p class='C'>Chris</p>
+  </div>
+</body>
+
+</html>
