@@ -1,26 +1,2 @@
-ongefilterd:
---------------------
-[ ]A  [ ]B  [ ]C
-Abe
-Anton
-Beatrix
-Bob
-Charlotte
-Chris
---------------------
-
-gefilterd: (A is geselecteerd => toon alleen voornamen die met een A beginnen)
---------------------
-[X]A  [ ]B  [ ]C
-Abe
-Anton
---------------------
-
-gefilterd: (A en B zijn geselecteerd => toon alleen voornamen die met een A of een B beginnen)
---------------------
-[X]A  [X]B  [ ]C
-Abe
-Anton
-Beatrix
-Bob
---------------------
+Stap 1:
+Toon alleen de voornamen waarvan de eerste letter van de voornaam is geselecteerd met een checkbox (A, B, C)
