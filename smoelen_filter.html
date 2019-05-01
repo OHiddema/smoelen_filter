@@ -11,6 +11,13 @@
   <script>
 
     $(function () {
+
+      // Synchronize checkboxes with display when page has loaded: all checkboxes must be checked
+      // because alle elements that can be filtered are visible (display: block)
+      $('#cbA').prop('checked', true);
+      $('#cbB').prop('checked', true);
+      $('#cbC').prop('checked', true);
+
       $('#cbA').click(function () {
         if ($(this).is(':checked')) {
           $('.A').css('display', 'block');
@@ -38,6 +45,7 @@
           $('.C').css('display', 'none');
         }
       });
+
     });
 
   </script>
@@ -51,21 +59,8 @@
     }
 
     #namelist div {
-      /* display: none; */
       background-color: #CCCCCC;
     }
-
-    /* #cbA:checked~* .A {
-      display: block;
-    }
-
-    #cbB:checked~* .B {
-      display: block;
-    }
-
-    #cbC:checked~* .C {
-      display: block;
-    } */
   </style>
 
 </head>
