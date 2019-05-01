@@ -18,29 +18,17 @@
       $('#cbB').prop('checked', true);
       $('#cbC').prop('checked', true);
 
-      $('#cbA').click(function () {
-        if ($(this).is(':checked')) {
-          $('.A').css('display', 'block');
+      function filter(checkbox, nameClass) {
+        if ($(checkbox).is(':checked')) {
+          $(nameClass).css('display', 'block');
         } else {
-          $('.A').css('display', 'none');
+          $(nameClass).css('display', 'none');
         }
-      });
+      }
 
-      $('#cbB').click(function () {
-        if ($(this).is(':checked')) {
-          $('.B').css('display', 'block');
-        } else {
-          $('.B').css('display', 'none');
-        }
-      });
-
-      $('#cbC').click(function () {
-        if ($(this).is(':checked')) {
-          $('.C').css('display', 'block');
-        } else {
-          $('.C').css('display', 'none');
-        }
-      });
+      $('#cbA').click(function () {filter(this, '.A');});
+      $('#cbB').click(function () {filter(this, '.B');});
+      $('#cbC').click(function () {filter(this, '.C');});
 
     });
 
