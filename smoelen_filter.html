@@ -6,6 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+  <script>
+
+    $(function () {
+      $('#cbA').click(function () {
+        if ($(this).is(':checked')) {
+          $('.A').css('display', 'block');
+        } else {
+          $('.A').css('display', 'none');
+        }
+      });
+    });
+
+    $(function () {
+      $('#cbB').click(function () {
+        if ($(this).is(':checked')) {
+          $('.B').css('display', 'block');
+        } else {
+          $('.B').css('display', 'none');
+        }
+      });
+    });
+
+    $(function () {
+      $('#cbC').click(function () {
+        if ($(this).is(':checked')) {
+          $('.C').css('display', 'block');
+        } else {
+          $('.C').css('display', 'none');
+        }
+      });
+    });
+
+  </script>
 
   <style>
     #namelist {
@@ -16,10 +51,11 @@
     }
 
     #namelist div {
-      display: none;
+      /* display: none; */
       background-color: #CCCCCC;
     }
-    #cbA:checked~* .A {
+
+    /* #cbA:checked~* .A {
       display: block;
     }
 
@@ -29,7 +65,7 @@
 
     #cbC:checked~* .C {
       display: block;
-    }
+    } */
   </style>
 
 </head>
