@@ -19,7 +19,8 @@
       $('#checkboxC').prop('checked', true);
 
       function filter(checkbox, nameClass) {
-        if ($(checkbox).is(':checked')) {
+        // if ($(checkbox).is(':checked')) {
+        if ($(checkbox).prop('checked')) {
           $(nameClass).css('display', 'block');
         } else {
           $(nameClass).css('display', 'none');
