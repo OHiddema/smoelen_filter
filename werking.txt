@@ -10,11 +10,13 @@ Stop de te filteren elementen in een grid i.p.v. een DIV.
 Stap 3:
 Gebruik jQuery i.p.v. CSS-selectors om de elementen te filteren.
 
-To do:
-------
-
 Stap 4:
 Gebruik meerdere selectiecriteria (nu alleen op eerste letter van naam)
 
+To do:
+------
 Stap 5:
 Zorg voor een aantrekkelijke opmaak, die er als een echt smoelenboek uitziet, zoals https://github.com/OHiddema/smoelenboek
+
+Stap 6:
+jQuery hercoderen, zodat deze ook onderhoudbaar blijft als er nieuwe selectieseriteria worden toegevoegd.
