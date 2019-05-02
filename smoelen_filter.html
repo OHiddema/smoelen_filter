@@ -17,9 +17,10 @@
       $('#checkboxA').prop('checked', true);
       $('#checkboxB').prop('checked', true);
       $('#checkboxC').prop('checked', true);
+      $('#checkboxMale').prop('checked', true);
+      $('#checkboxFemale').prop('checked', true);
 
       function filter(checkbox, nameClass) {
-        // if ($(checkbox).is(':checked')) {
         if ($(checkbox).prop('checked')) {
           $(nameClass).css('display', 'block');
         } else {
@@ -27,10 +28,11 @@
         }
       }
 
-      $('#checkboxA').click(function () {filter(this, '.A');});
-      $('#checkboxB').click(function () {filter(this, '.B');});
-      $('#checkboxC').click(function () {filter(this, '.C');});
-
+      $('#checkboxA').click(function () { filter(this, '.A'); });
+      $('#checkboxB').click(function () { filter(this, '.B'); });
+      $('#checkboxC').click(function () { filter(this, '.C'); });
+      $('#checkboxMale').click(function () { filter(this, '.male'); });
+      $('#checkboxFemale').click(function () { filter(this, '.female'); });
     });
 
   </script>
@@ -51,17 +53,26 @@
 </head>
 
 <body>
-  <input type="checkbox" id='checkboxA' /> A
-  <input type="checkbox" id='checkboxB' /> B
-  <input type="checkbox" id='checkboxC' /> C
+  <p>
+    Voornaam:
+    <input type="checkbox" id='checkboxA' /> A
+    <input type="checkbox" id='checkboxB' /> B
+    <input type="checkbox" id='checkboxC' /> C
+  </p>
+
+  <p>
+    Geslacht:
+    <input type="checkbox" id='checkboxMale' /> M
+    <input type="checkbox" id='checkboxFemale' /> V
+  </p>
 
   <div id='namelist'>
-    <div class='A'>Anton</div>
-    <div class='A'>Abe</div>
-    <div class='B'>Beatrix</div>
-    <div class='B'>Bob</div>
-    <div class='C'>Charlotte</div>
-    <div class='C'>Chris</div>
+    <div class='A male'>Anton<br>male</div>
+    <div class='A female'>Atoinette<br>female</div>
+    <div class='B male'>Bob<br>male</div>
+    <div class='B female'>Beatrix<br>female</div>
+    <div class='C male'>Chris<br>male</div>
+    <div class='C female'>Charlotte<br>female</div>
   </div>
 </body>
 
