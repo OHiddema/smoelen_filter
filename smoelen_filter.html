@@ -14,9 +14,9 @@
 
       // Synchronize checkboxes with display when page has loaded: all checkboxes must be checked
       // because alle elements that can be filtered are visible (display: block)
-      $('#cbA').prop('checked', true);
-      $('#cbB').prop('checked', true);
-      $('#cbC').prop('checked', true);
+      $('#checkboxA').prop('checked', true);
+      $('#checkboxB').prop('checked', true);
+      $('#checkboxC').prop('checked', true);
 
       function filter(checkbox, nameClass) {
         if ($(checkbox).is(':checked')) {
@@ -26,9 +26,9 @@
         }
       }
 
-      $('#cbA').click(function () {filter(this, '.A');});
-      $('#cbB').click(function () {filter(this, '.B');});
-      $('#cbC').click(function () {filter(this, '.C');});
+      $('#checkboxA').click(function () {filter(this, '.A');});
+      $('#checkboxB').click(function () {filter(this, '.B');});
+      $('#checkboxC').click(function () {filter(this, '.C');});
 
     });
 
@@ -50,9 +50,9 @@
 </head>
 
 <body>
-  <input type="checkbox" id='cbA' /> A
-  <input type="checkbox" id='cbB' /> B
-  <input type="checkbox" id='cbC' /> C
+  <input type="checkbox" id='checkboxA' /> A
+  <input type="checkbox" id='checkboxB' /> B
+  <input type="checkbox" id='checkboxC' /> C
 
   <div id='namelist'>
     <div class='A'>Anton</div>
