@@ -19,5 +19,7 @@ Zorg voor een aantrekkelijke opmaak, die er als een echt smoelenboek uitziet, zo
 Stap 6:
 jQuery hercoderen, zodat deze ook onderhoudbaar blijft als er nieuwe selectieseriteria worden toegevoegd.
 
+Step 7:
+Use smaller images, stored locally, for faster page loading.
+
 To do:
-...
