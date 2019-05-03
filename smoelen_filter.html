@@ -9,55 +9,29 @@
   <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 
   <script>
-
     $(function () {
+      $('.cbFilter').prop('checked', true);
+      $('.cbFilter').click(function () { filter(); });
 
-      // Synchronize checkboxes with display when page has loaded: all checkboxes must be checked
-      // because alle elements that can be filtered are visible (display: block)
-      $('#checkboxA').prop('checked', true);
-      $('#checkboxB').prop('checked', true);
-      $('#checkboxC').prop('checked', true);
-      $('#checkboxMale').prop('checked', true);
-      $('#checkboxFemale').prop('checked', true);
-
-      function filter(checkbox, nameClass) {
-        if ($(checkbox).prop('checked')) {
-          $(nameClass).css('display', 'flex');
-
-          if (nameClass == '.male' | nameClass == '.female') {
-            if ($('#checkboxA').prop('checked') == false) {
-              $('.A').css('display', 'none');
-            }
-            if ($('#checkboxB').prop('checked') == false) {
-              $('.B').css('display', 'none');
-            }
-            if ($('#checkboxC').prop('checked') == false) {
-              $('.C').css('display', 'none');
-            }
-          }
-
-          if (nameClass == '.A' | nameClass == '.B' | nameClass == '.C') {
-            if ($('#checkboxMale').prop('checked') == false) {
-              $('.male').css('display', 'none');
-            }
-            if ($('#checkboxFemale').prop('checked') == false) {
-              $('.female').css('display', 'none');
-            }
-          }
-
-        } else {
-          $(nameClass).css('display', 'none');
+      function filter() {
+        $('.subCont').css('display', 'flex');
+        if ($('#checkboxA').prop('checked') === false) {
+          $('.A').css('display', 'none');
+        }
+        if ($('#checkboxB').prop('checked') === false) {
+          $('.B').css('display', 'none');
+        }
+        if ($('#checkboxC').prop('checked') === false) {
+          $('.C').css('display', 'none');
+        }
+        if ($('#checkboxMale').prop('checked') === false) {
+          $('.male').css('display', 'none');
+        }
+        if ($('#checkboxFemale').prop('checked') === false) {
+          $('.female').css('display', 'none');
         }
       }
-
-      $('#checkboxA').click(function () { filter(this, '.A'); });
-      $('#checkboxB').click(function () { filter(this, '.B'); });
-      $('#checkboxC').click(function () { filter(this, '.C'); });
-      $('#checkboxMale').click(function () { filter(this, '.male'); });
-      $('#checkboxFemale').click(function () { filter(this, '.female'); });
-
     });
-
   </script>
 
   <style>
@@ -105,17 +79,17 @@
 </head>
 
 <body>
-  <p class = 'selectionBox'>
+  <p class='selectionBox'>
     Voornaam:
-    <input type="checkbox" id='checkboxA' /> A
-    <input type="checkbox" id='checkboxB' /> B
-    <input type="checkbox" id='checkboxC' /> C
+    <input type="checkbox" id='checkboxA' class='cbFilter' /> A
+    <input type="checkbox" id='checkboxB' class='cbFilter' /> B
+    <input type="checkbox" id='checkboxC' class='cbFilter' /> C
   </p>
 
-  <p class = 'selectionBox'>
+  <p class='selectionBox'>
     Geslacht:
-    <input type="checkbox" id='checkboxMale' /> M
-    <input type="checkbox" id='checkboxFemale' /> V
+    <input type="checkbox" id='checkboxMale' class='cbFilter' /> M
+    <input type="checkbox" id='checkboxFemale' class='cbFilter' /> V
   </p>
 
   <div id='namelist'>
@@ -171,56 +145,56 @@
       <div><img src="https://i.imgur.com/BAw7jos.jpg" alt="Foto Sietse"></div>
     </div>
     <div class='subCont female A'>
-        <div>
-          <h3>Antoinette</h3>
-          <ul>
-            <li>Leeftijd: 49</li>
-            <li>Woonplaats: Groningen</li>
-          </ul>
-          <p>Geboren en getogen in Friesland. Werktuigbouwkunde gestudeerd in Twente. In een ver verleden, toen het
-            internet nog in zijn kinderschoenen stond, ten tijde van de millenium-bug en de overstap naar de euro, een
-            aantal jaren geprogrammeerd. Nu bij Code Gorilla een tweede leven als programmeur begonnen.</p>
-        </div>
-        <div><img src="https://i.imgur.com/KtL2j36.jpg" alt="Foto Oege"> </div>
+      <div>
+        <h3>Antoinette</h3>
+        <ul>
+          <li>Leeftijd: 49</li>
+          <li>Woonplaats: Groningen</li>
+        </ul>
+        <p>Geboren en getogen in Friesland. Werktuigbouwkunde gestudeerd in Twente. In een ver verleden, toen het
+          internet nog in zijn kinderschoenen stond, ten tijde van de millenium-bug en de overstap naar de euro, een
+          aantal jaren geprogrammeerd. Nu bij Code Gorilla een tweede leven als programmeur begonnen.</p>
       </div>
-      <div class='subCont female A'>
-        <div>
-          <h3>Anneke</h3>
-          <ul>
-            <li> Leeftijd: 33</li>
-            <li> Woonplaats: Groningen</li>
-          </ul>
-          <p> In een warme woonkamer in Noordlaren, ergens tijdens de elfstedentocht van ’86, was het tijd voor mij om de
-            wereld te begroeten. Inmiddels heb ik me ontwikkeld tot groot liefhebber van thee, chocolade en moeilijke
-            muziek. Daarnaast teken en programmeer ik graag, en waag ik me geregeld aan een goed bordspel.</p>
-        </div>
-        <div><img src="https://i.imgur.com/UblmLma.jpg" alt="Foto Joske"></div>
+      <div><img src="https://i.imgur.com/KtL2j36.jpg" alt="Foto Oege"> </div>
+    </div>
+    <div class='subCont female A'>
+      <div>
+        <h3>Anneke</h3>
+        <ul>
+          <li> Leeftijd: 33</li>
+          <li> Woonplaats: Groningen</li>
+        </ul>
+        <p> In een warme woonkamer in Noordlaren, ergens tijdens de elfstedentocht van ’86, was het tijd voor mij om de
+          wereld te begroeten. Inmiddels heb ik me ontwikkeld tot groot liefhebber van thee, chocolade en moeilijke
+          muziek. Daarnaast teken en programmeer ik graag, en waag ik me geregeld aan een goed bordspel.</p>
       </div>
-      <div class='subCont female B'>
-        <div>
-          <h3>Barbara</h3>
-          <ul>
-            <li>Leeftijd: 49</li>
-            <li>Woonplaats: Coevorden</li>
-          </ul>
-          <p>Ik heb een commerciële achtergrond maar ben nu op weg web developer te worden! Ik houd van muziek, wandelen,
-            fietsen, films. Ik ben getrouwd en heb een zoon en dochter, beide in de puberleeftijd...</p>
-        </div>
-        <div><img src="https://i.imgur.com/3l2XEP0.jpg" alt="Foto Jacco"></div>
+      <div><img src="https://i.imgur.com/UblmLma.jpg" alt="Foto Joske"></div>
+    </div>
+    <div class='subCont female B'>
+      <div>
+        <h3>Barbara</h3>
+        <ul>
+          <li>Leeftijd: 49</li>
+          <li>Woonplaats: Coevorden</li>
+        </ul>
+        <p>Ik heb een commerciële achtergrond maar ben nu op weg web developer te worden! Ik houd van muziek, wandelen,
+          fietsen, films. Ik ben getrouwd en heb een zoon en dochter, beide in de puberleeftijd...</p>
       </div>
-      <div class='subCont female C'>
-        <div>
-          <h3>Charlotte</h3>
-          <ul>
-            <li>Leeftijd: 40 </li>
-            <li>Woonplaats: Groningen</li>
-          </ul>
-          <p> Ik kom uit het friese Oldeboorn en ik ben inmiddels al 5 jaar een stadjer. Ik bezoek geregeld een concert of
-            cabaretvoorstelling, en een beetje een nieuwsjunk.</p>
-        </div>
-        <div><img src="https://i.imgur.com/ktSkuf1.jpg" alt="Foto Sietse"></div>
+      <div><img src="https://i.imgur.com/3l2XEP0.jpg" alt="Foto Jacco"></div>
+    </div>
+    <div class='subCont female C'>
+      <div>
+        <h3>Charlotte</h3>
+        <ul>
+          <li>Leeftijd: 40 </li>
+          <li>Woonplaats: Groningen</li>
+        </ul>
+        <p> Ik kom uit het friese Oldeboorn en ik ben inmiddels al 5 jaar een stadjer. Ik bezoek geregeld een concert of
+          cabaretvoorstelling, en een beetje een nieuwsjunk.</p>
       </div>
-  
+      <div><img src="https://i.imgur.com/ktSkuf1.jpg" alt="Foto Sietse"></div>
+    </div>
+
   </div>
 </body>
 
