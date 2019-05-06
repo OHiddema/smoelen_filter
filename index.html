@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+  <script>
+    $(function () {
+      $('.cbFilter').prop('checked', true);
+      $('.cbFilter').click(function () { filter(); });
+
+      function filter() {
+        $('.subCont').css('display', 'flex');
+        if ($('#checkboxA').prop('checked') === false) {
+          $('.A').css('display', 'none');
+        }
+        if ($('#checkboxB').prop('checked') === false) {
+          $('.B').css('display', 'none');
+        }
+        if ($('#checkboxC').prop('checked') === false) {
+          $('.C').css('display', 'none');
+        }
+        if ($('#checkboxMale').prop('checked') === false) {
+          $('.male').css('display', 'none');
+        }
+        if ($('#checkboxFemale').prop('checked') === false) {
+          $('.female').css('display', 'none');
+        }
+      }
+    });
+  </script>
+
+  <style>
+    #namelist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+
+    #namelist div {
+      background-color: #CCCCCC;
+    }
+
+    .subCont {
+      display: flex;
+      justify-content: space-around;
+      background-color: burlywood;
+      padding: 10px;
+      border-radius: 15px;
+    }
+
+    .subCont div {
+      width: 40%;
+      height: 100%;
+    }
+
+    @media (max-width: 740px) {
+      #namelist {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .subCont img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .selectionBox {
+      background-color: #CCCCCC;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <p class='selectionBox'>
+    Voornaam:
+    <input type="checkbox" id='checkboxA' class='cbFilter' /> A
+    <input type="checkbox" id='checkboxB' class='cbFilter' /> B
+    <input type="checkbox" id='checkboxC' class='cbFilter' /> C
+  </p>
+
+  <p class='selectionBox'>
+    Geslacht:
+    <input type="checkbox" id='checkboxMale' class='cbFilter' /> M
+    <input type="checkbox" id='checkboxFemale' class='cbFilter' /> V
+  </p>
+
+  <div id='namelist'>
+
+    <div class='subCont male A'>
+      <div>
+        <h3>Anton</h3>
+        <ul>
+          <li>Leeftijd: 49</li>
+          <li>Woonplaats: Groningen</li>
+        </ul>
+        <p>Geboren en getogen in Friesland. Werktuigbouwkunde gestudeerd in Twente. In een ver verleden, toen het
+          internet nog in zijn kinderschoenen stond, ten tijde van de millenium-bug en de overstap naar de euro, een
+          aantal jaren geprogrammeerd. Nu bij Code Gorilla een tweede leven als programmeur begonnen.</p>
+      </div>
+      <div><img src="images/maleA1.jpg" alt="Foto Anton"> </div>
+    </div>
+    <div class='subCont male A'>
+      <div>
+        <h3>Abe</h3>
+        <ul>
+          <li> Leeftijd: 33</li>
+          <li> Woonplaats: Groningen</li>
+        </ul>
+        <p> In een warme woonkamer in Noordlaren, ergens tijdens de elfstedentocht van ’86, was het tijd voor mij om de
+          wereld te begroeten. Inmiddels heb ik me ontwikkeld tot groot liefhebber van thee, chocolade en moeilijke
+          muziek. Daarnaast teken en programmeer ik graag, en waag ik me geregeld aan een goed bordspel.</p>
+      </div>
+      <div><img src="images/maleA2.jpg" alt="Foto Abe"></div>
+    </div>
+    <div class='subCont male B'>
+      <div>
+        <h3>Bob</h3>
+        <ul>
+          <li>Leeftijd: 49</li>
+          <li>Woonplaats: Coevorden</li>
+        </ul>
+        <p>Ik heb een commerciële achtergrond maar ben nu op weg web developer te worden! Ik houd van muziek, wandelen,
+          fietsen, films. Ik ben getrouwd en heb een zoon en dochter, beide in de puberleeftijd...</p>
+      </div>
+      <div><img src="images/maleB1.jpg" alt="Foto Bob"></div>
+    </div>
+    <div class='subCont male C'>
+      <div>
+        <h3>Cor</h3>
+        <ul>
+          <li>Leeftijd: 40 </li>
+          <li>Woonplaats: Groningen</li>
+        </ul>
+        <p> Ik kom uit het friese Oldeboorn en ik ben inmiddels al 5 jaar een stadjer. Ik bezoek geregeld een concert of
+          cabaretvoorstelling, en een beetje een nieuwsjunk.</p>
+      </div>
+      <div><img src="images/maleC1.jpg" alt="Foto Cor"></div>
+    </div>
+    <div class='subCont female A'>
+      <div>
+        <h3>Antoinette</h3>
+        <ul>
+          <li>Leeftijd: 49</li>
+          <li>Woonplaats: Groningen</li>
+        </ul>
+        <p>Geboren en getogen in Friesland. Werktuigbouwkunde gestudeerd in Twente. In een ver verleden, toen het
+          internet nog in zijn kinderschoenen stond, ten tijde van de millenium-bug en de overstap naar de euro, een
+          aantal jaren geprogrammeerd. Nu bij Code Gorilla een tweede leven als programmeur begonnen.</p>
+      </div>
+      <div><img src="images/femaleA1.jpg" alt="Foto Antoinette"> </div>
+    </div>
+    <div class='subCont female A'>
+      <div>
+        <h3>Anneke</h3>
+        <ul>
+          <li> Leeftijd: 33</li>
+          <li> Woonplaats: Groningen</li>
+        </ul>
+        <p> In een warme woonkamer in Noordlaren, ergens tijdens de elfstedentocht van ’86, was het tijd voor mij om de
+          wereld te begroeten. Inmiddels heb ik me ontwikkeld tot groot liefhebber van thee, chocolade en moeilijke
+          muziek. Daarnaast teken en programmeer ik graag, en waag ik me geregeld aan een goed bordspel.</p>
+      </div>
+      <div><img src="images/femaleA2.jpg" alt="Foto Anneke"></div>
+    </div>
+    <div class='subCont female B'>
+      <div>
+        <h3>Barbara</h3>
+        <ul>
+          <li>Leeftijd: 49</li>
+          <li>Woonplaats: Coevorden</li>
+        </ul>
+        <p>Ik heb een commerciële achtergrond maar ben nu op weg web developer te worden! Ik houd van muziek, wandelen,
+          fietsen, films. Ik ben getrouwd en heb een zoon en dochter, beide in de puberleeftijd...</p>
+      </div>
+      <div><img src="images/femaleB1.jpg" alt="Foto Barbara"></div>
+    </div>
+    <div class='subCont female C'>
+      <div>
+        <h3>Charlotte</h3>
+        <ul>
+          <li>Leeftijd: 40 </li>
+          <li>Woonplaats: Groningen</li>
+        </ul>
+        <p> Ik kom uit het friese Oldeboorn en ik ben inmiddels al 5 jaar een stadjer. Ik bezoek geregeld een concert of
+          cabaretvoorstelling, en een beetje een nieuwsjunk.</p>
+      </div>
+      <div><img src="images/femaleC1.jpg" alt="Foto Charlotte"></div>
+    </div>
+
+  </div>
+</body>
+
+</html>
