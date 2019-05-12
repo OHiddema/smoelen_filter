@@ -23,6 +23,6 @@ $(function () {
 
   // bootstrap
   $('img').addClass('img-circle');
-  $('h3').addClass('text-center red-text');
+  $('h3').addClass('text-center');
   $('[data-toggle="tooltip"]').tooltip();
 });
