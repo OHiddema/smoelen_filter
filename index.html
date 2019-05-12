@@ -7,75 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-
-  <script>
-    $(function () {
-      $('.cbFilter').prop('checked', true);
-      $('.cbFilter').click(function () { filter(); });
-
-      function filter() {
-        $('.subCont').css('display', 'flex');
-        if ($('#checkboxA').prop('checked') === false) {
-          $('.A').css('display', 'none');
-        }
-        if ($('#checkboxB').prop('checked') === false) {
-          $('.B').css('display', 'none');
-        }
-        if ($('#checkboxC').prop('checked') === false) {
-          $('.C').css('display', 'none');
-        }
-        if ($('#checkboxMale').prop('checked') === false) {
-          $('.male').css('display', 'none');
-        }
-        if ($('#checkboxFemale').prop('checked') === false) {
-          $('.female').css('display', 'none');
-        }
-      }
-    });
-  </script>
-
-  <style>
-    #namelist {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 10px;
-    }
-
-    #namelist div {
-      background-color: #CCCCCC;
-    }
-
-    .subCont {
-      display: flex;
-      justify-content: space-around;
-      background-color: burlywood;
-      padding: 10px;
-      border-radius: 15px;
-    }
-
-    .subCont div {
-      width: 40%;
-      height: 100%;
-    }
-
-    @media (max-width: 740px) {
-      #namelist {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .subCont img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .selectionBox {
-      background-color: #CCCCCC;
-      text-align: center;
-    }
-  </style>
-
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
