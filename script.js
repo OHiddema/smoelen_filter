@@ -20,4 +20,7 @@ $(function () {
       $('.female').css('display', 'none');
     }
   }
+
+  // bootstrap
+  $('img').addClass('img-circle');
 });
